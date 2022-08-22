@@ -32,9 +32,10 @@ export default function Textform(props) {
         let text = document.getElementById('refText');
         text.select();
         navigator.clipboard.writeText(text.value);
+        document.getSelection().removeAllRanges();
         props.showAlert('Text copied','success');
     }
-    const [text, setText] = useState("Enter text to Analyse");
+    const [text, setText] = useState("Enter text to analyse");
 
   return (
     <>
